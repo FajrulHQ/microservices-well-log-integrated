@@ -100,8 +100,9 @@ def search_logData_by_file(**params):
     return {"error": str(e)}
 
 def insertLAS(document):
-  las = lasio.read(document)
   try:
+    #path = f"\fileLAS\{document}"
+    las = lasio.read(document)
     wellData = [{
       "filename": document,
       "mnemonic": well.mnemonic,

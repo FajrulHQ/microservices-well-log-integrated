@@ -1,9 +1,8 @@
-from typing import final
 from fastapi import APIRouter
 from fastapi.datastructures import UploadFile
 from fastapi import APIRouter, File, UploadFile
 from apiLog import *
-import os, shutil, aiofiles
+import os, shutil
 
 router = APIRouter()
 
@@ -14,12 +13,15 @@ async def upload_las(las: UploadFile = File(...)):
     file_name = las.filename.replace(" ","-")
     with open(file_name,'wb+') as output_file:
       shutil.copyfileobj(las.file, output_file)
+      # content = las.file.read()
+      # output_file.write(content)
 
-    result = await insertLAS(file_name)
+    result = insertLAS(file_name)
     return result
     
   except Exception as e:
     return {"error": str(e)}
+
 
 @router.get("/well-information")
 async def view_search_wellInfo():
