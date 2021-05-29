@@ -27,7 +27,7 @@ class database:
     self.wellInfo.update_one(query_1, query_2)
     return self.wellInfo.find_one(query_1)
 
-  def delete_wellInfoByMnemonic(self, **params):
+  def delete_wellInfoByFileMnemonic(self, **params):
     self.wellInfo.delete_one({
       "filename":params["filename"],
       "mnemonic":params["mnemonic"]})
