@@ -36,17 +36,17 @@ __search data__ using `POST` route in Postman with request URL:
 
 ![search](./image/search.png)
 
-## Delete Data
-__delete data __ using `POST` route in Postman with request URL: 
-- `{url}/{collection}/delete`
-
-![delete](./image/delete.png)
-
 ## Update Data
 __update data__ using `POST` route in Postman with request URL: 
 - `{url}/{collection}/update`, and add new `dict` to modify data
 
 ![update](./image/update.png)
+
+## Delete Data
+__delete data__ using `POST` route in Postman with request URL: 
+- `{url}/{collection}/delete`
+
+![delete](./image/delete.png)
 
 
 
