@@ -23,9 +23,9 @@ Relationship between colletions are represented in the ERD below.
 
 ## Get Collection Data
 To get data from collection can access request URL: 
-- `{url}/log-data`
-- `{url}/well-information`,
-- `{url}/log-information`, or
+- `{url}/log-data`,
+- `{url}/well-information`, or
+- `{url}/log-information`
 
 ![get-collection](./image/get-collection.png)
 <small>* using localhost `127.0.0.1.8000`</small>
